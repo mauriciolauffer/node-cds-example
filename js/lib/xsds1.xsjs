@@ -1,8 +1,8 @@
 try {
 
 	var conn = $.db.getConnection();
-	var cds = $.require("sap-cds"); //.xsjs(conn);
-	var XSDS = cds.xsjs(conn);
+	var XSDS = $.require("sap-cds").xsjs(conn); //.xsjs(conn);
+	//var XSDS = cds.xsjs(conn);
 	//Import(Namespace,Entity Name, fields, options)
 	var oEmployee = XSDS.$importEntity("cds.example.db", "MD.Employees");
 	var employee = null;
